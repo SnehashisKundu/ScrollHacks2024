@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Database configuration
+
 const dbConfig = {
   user: 'your_username',
   password: 'your_password',
@@ -17,10 +17,10 @@ const dbConfig = {
   }
 };
 
-// Create a connection pool
+
 const pool = new sql.ConnectionPool(dbConfig);
 
-// Connect to the database
+
 pool.connect(err => {
   if (err) {
     console.error('error connecting:', err);
@@ -29,12 +29,12 @@ pool.connect(err => {
   console.log('connected');
 });
 
-// Home page
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-// About page
+
 app.get('/about', (req, res) => {
   const query = 'SELECT * FROM about';
   pool.request().query(query, (err, results) => {
@@ -46,17 +46,17 @@ app.get('/about', (req, res) => {
   });
 });
 
-// Contact page
+
 app.get('/contact', (req, res) => {
   res.sendFile(__dirname + '/contact.html');
 });
 
-// Report page
+
 app.get('/report', (req, res) => {
   res.sendFile(__dirname + '/report.html');
 });
 
-// Handle report submission
+
 app.post('/report', (req, res) => {
   const reportText = req.body.reportText;
   const location = req.body.location;
@@ -77,7 +77,7 @@ app.post('/report', (req, res) => {
   });
 });
 
-// Handle contact submission
+
 app.post('/contact', (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
@@ -98,7 +98,6 @@ app.post('/contact', (req, res) => {
     });
 });
 
-// Start the server
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
