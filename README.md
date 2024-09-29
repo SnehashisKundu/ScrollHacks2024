@@ -1,1 +1,3 @@
 # ScrollHacks2024
+#SafetyNet:Women Safety ANd Threat Analysis App
+This project introduces an innovative women’s safety app that allows users to report safety issues with evidence through a form. These reports are displayed as blog-style posts on the app’s homepage, creating a transparent platform for sharing experiences. The app also uses location-based data to map reported incidents, providing authorities with real-time access to safety concerns in specific areas. By analyzing these reports, the app calculates threat probabilities for different locations, helping both users and local authorities identify high-risk areas and take proactive safety measures.
