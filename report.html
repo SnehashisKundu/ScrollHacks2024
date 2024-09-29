@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report an Incident</title>
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h1>Report Form with AI Voice Assistance</h1>
+    <form id="report-form" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone"><br><br>
+      <label for="reportDetails">Report Details:</label>
+      <textarea id="reportDetails" name="reportDetails"></textarea><br><br>
+      <button id="submit-btn">Submit</button>
+      <button id="voice-btn">Speak to Fill Form</button>
+    </form>
+  <script src="report.js"></script>
+  </body>
+</html>
