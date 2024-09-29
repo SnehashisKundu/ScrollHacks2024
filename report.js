@@ -1,8 +1,8 @@
-// Check if the browser supports SpeechRecognition
+
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
-recognition.interimResults = false; // We only need the final result
+recognition.interimResults = false;
 recognition.lang = "en-US";
 
 let currentField = 0;
